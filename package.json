@@ -1,0 +1,22 @@
+{
+  "name": "dsh-theme-umaru-cuddle",
+  "version": "1.0.2",
+  "private": true,
+  "description": "小埋耶·抱枕小窝 — 桃粉奶油色、抱枕插画与软绵绵的新会话页面。",
+  "author": "dingfz-cyber",
+  "homepage": "https://github.com/dingfz-cyber/dsh-theme-umaru-cuddle#readme",
+  "repository": {"type": "git", "url": "https://github.com/dingfz-cyber/dsh-theme-umaru-cuddle.git"},
+  "bugs": {"url": "https://github.com/dingfz-cyber/dsh-theme-umaru-cuddle/issues"},
+  "icon": "assets/icon.jpg",
+  "license": "UNLICENSED",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {".": "./lib/index.js", "./client": "./lib/client.js", "./locale/*.json": "./locale/*.json", "./package.json": "./package.json"},
+  "files": ["lib", "assets", "locale", "cordis.patch.yml", "README.md", "LICENSE"],
+  "engines": {"node": ">=20"},
+  "scripts": {"build": "node scripts/build.mjs"},
+  "dsh": {
+    "bundle": {"patch": "./cordis.patch.yml"},
+    "client": {"inject": ["@deepseek-ai/dsh-client-ui-theme", "@deepseek-ai/dsh-client-ui-renderer", "@deepseek-ai/dsh-client-ui-sidebar"], "platform": "web", "immediately": true}
+  }
+}

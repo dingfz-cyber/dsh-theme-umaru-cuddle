@@ -1,0 +1,222 @@
+/* Measurements follow the 1487 × 1058 source artwork. The host still owns
+   the sidebar column width, persisted resize state, and resize handle. */
+body[data-umaru-cuddle] .mP3x-q_sidebarCol {
+  --dsw-specific-sidebar-fill:var(--cuddle-sidebar,#fff0e5);
+}
+body[data-umaru-cuddle] .wtg9ga_root:not(.wtg9ga_collapsed) {
+  --dsh-sidebar-inline-padding:calc(23 * var(--cuddle-u));
+  box-sizing:border-box;
+  min-width:0;
+  padding:0 calc(19 * var(--cuddle-u)) calc(28 * var(--cuddle-u)) var(--dsh-sidebar-inline-padding);
+  background:var(--cuddle-sidebar,#fff0e5);
+  color:var(--cuddle-ink,#5c3833);
+  font-size:calc(20 * var(--cuddle-u));
+  font-family:var(--dsw-font-family,"Microsoft YaHei UI","Microsoft YaHei","Segoe UI",sans-serif);
+}
+body[data-umaru-cuddle] .wtg9ga_root :is(button,input) {
+  font-family:inherit;
+}
+
+/* Only the decorative brand is replaced; the native brand action and
+   collapse control keep their existing hit targets and keyboard behavior. */
+body[data-umaru-cuddle] .wtg9ga_root:not(.wtg9ga_collapsed) .wtg9ga_logoRow {
+  position:relative;
+  container-type:inline-size;
+  flex:none;
+  /* The source's y=153 includes the top of the window. DSH already reserves
+     its native title bar before this root; do not count that space twice. */
+  height:max(calc(92 * var(--cuddle-u)),calc(153 * var(--cuddle-u) - var(--cuddle-top-chrome,0px)));
+  margin:0;
+  padding:0;
+  border:0;
+  overflow:visible;
+}
+body[data-umaru-cuddle] .wtg9ga_root:not(.wtg9ga_collapsed) .wtg9ga_brand {
+  position:relative;
+  height:calc(118 * var(--cuddle-u));
+  padding:0;
+  min-width:0;
+}
+body[data-umaru-cuddle] .wtg9ga_root:not(.wtg9ga_collapsed) .wtg9ga_brandIdentity {
+  opacity:0;
+}
+body[data-umaru-cuddle] .cuddle-brand {
+  --cuddle-brand-top:max(0px,calc(20 * var(--cuddle-u) - var(--cuddle-top-chrome,0px)));
+  --cuddle-brand-room:max(calc(80 * var(--cuddle-u)),calc(153 * var(--cuddle-u) - var(--cuddle-top-chrome,0px) - var(--cuddle-brand-top)));
+  --cuddle-brand-u:min(var(--cuddle-u),calc(100cqw / 252),calc(var(--cuddle-brand-room) / 118));
+  position:absolute;
+  left:calc(-3 * var(--cuddle-u));
+  top:var(--cuddle-brand-top);
+  width:calc(252 * var(--cuddle-brand-u));
+  height:calc(118 * var(--cuddle-brand-u));
+  background-repeat:no-repeat;
+  background-size:calc(1487 * var(--cuddle-brand-u)) calc(1058 * var(--cuddle-brand-u));
+  background-position:calc(-20 * var(--cuddle-brand-u)) calc(-20 * var(--cuddle-brand-u));
+  pointer-events:none;
+  user-select:none;
+}
+body[data-umaru-cuddle] .wtg9ga_collapsed .cuddle-brand,
+body[data-umaru-cuddle] .wtg9ga_collapsed .cuddle-sidebar-art {
+  display:none;
+}
+
+body[data-umaru-cuddle] .wtg9ga_root:not(.wtg9ga_collapsed) .wtg9ga_newSession {
+  height:calc(56 * var(--cuddle-u));
+  margin:0 0 calc(15 * var(--cuddle-u));
+  padding:0 calc(25 * var(--cuddle-u));
+  border:0;
+  border-radius:calc(20 * var(--cuddle-u));
+  background:#ef8c8d;
+  box-shadow:none;
+  color:#fff;
+  font-size:calc(20 * var(--cuddle-u));
+  font-weight:600;
+  --dsw-alias-label-primary:#fff;
+}
+body[data-umaru-cuddle] .wtg9ga_root:not(.wtg9ga_collapsed) .wtg9ga_newSession:hover {
+  background:#e77f84;
+}
+body[data-umaru-cuddle] .wtg9ga_root:not(.wtg9ga_collapsed) .wtg9ga_newSessionContent {
+  justify-content:flex-start;
+  gap:calc(17 * var(--cuddle-u));
+}
+body[data-umaru-cuddle] .wtg9ga_root:not(.wtg9ga_collapsed) .wtg9ga_newSessionContent>svg {
+  width:calc(28 * var(--cuddle-u));
+  height:calc(28 * var(--cuddle-u));
+}
+body[data-umaru-cuddle] .wtg9ga_root:not(.wtg9ga_collapsed) .wtg9ga_panelList {
+  gap:0;
+  margin:0 calc(8 * var(--cuddle-u)) calc(16 * var(--cuddle-u));
+  padding-bottom:calc(12 * var(--cuddle-u));
+  border-bottom:1px solid #f7d7c8;
+}
+body[data-umaru-cuddle] .wtg9ga_root:not(.wtg9ga_collapsed) .wtg9ga_panelRow {
+  min-height:calc(54 * var(--cuddle-u));
+  margin:0 calc(-8 * var(--cuddle-u));
+  padding:0 calc(22 * var(--cuddle-u));
+  gap:calc(23 * var(--cuddle-u));
+  border-radius:calc(12 * var(--cuddle-u));
+  color:var(--cuddle-ink,#5c3833);
+  font-size:calc(21 * var(--cuddle-u));
+  line-height:1.4;
+}
+body[data-umaru-cuddle] .wtg9ga_root:not(.wtg9ga_collapsed) .wtg9ga_panelGlyph svg {
+  width:calc(26 * var(--cuddle-u));
+  height:calc(26 * var(--cuddle-u));
+}
+
+/* The native history list owns scrolling. Its reserved flex basis is spent
+   before the decorative footer so added sessions cannot be squeezed away. */
+body[data-umaru-cuddle] .wtg9ga_root:not(.wtg9ga_collapsed) .wtg9ga_regionArea {
+  flex:1 0 min(calc(264 * var(--cuddle-u)),30vh);
+  min-height:0;
+}
+body[data-umaru-cuddle] .wtg9ga_root:not(.wtg9ga_collapsed) .GAkraW_sectionHeader {
+  height:calc(32 * var(--cuddle-u));
+  margin:0;
+  padding-left:calc(15 * var(--cuddle-u));
+  font-size:calc(16 * var(--cuddle-u));
+}
+body[data-umaru-cuddle] .wtg9ga_root:not(.wtg9ga_collapsed) .GAkraW_sectionLabel {
+  font-size:inherit;
+  color:#a78579;
+}
+body[data-umaru-cuddle] .wtg9ga_root:not(.wtg9ga_collapsed) .wnFoaW_sessionRow {
+  box-sizing:border-box;
+  height:calc(42 * var(--cuddle-u));
+  min-height:calc(42 * var(--cuddle-u));
+  padding-top:0;
+  padding-bottom:0;
+  border-radius:calc(12 * var(--cuddle-u));
+  font-size:calc(18 * var(--cuddle-u));
+}
+body[data-umaru-cuddle] .wtg9ga_root:not(.wtg9ga_collapsed) :is(.wnFoaW_sessionRow,.wnFoaW_projectRow) .wnFoaW_title {
+  font-family:inherit;
+  font-size:calc(18 * var(--cuddle-u));
+  line-height:calc(26 * var(--cuddle-u));
+}
+body[data-umaru-cuddle] .wnFoaW_sessionRow.wnFoaW_selected {
+  background:#f9d5cf;
+}
+body[data-umaru-cuddle] .wnFoaW_sessionRow.wnFoaW_selected [class$="_title"] {
+  color:var(--cuddle-ink,#5c3833);
+  font-weight:600;
+}
+
+/* Both footer ancestors may shrink. The entire source crop scales together
+   inside the available box and never extends over the native resize edge. */
+body[data-umaru-cuddle] .wtg9ga_footArea:has(.cuddle-sidebar-art) {
+  flex:0 1 auto;
+  min-height:calc(64 * var(--cuddle-u));
+}
+body[data-umaru-cuddle] .wtg9ga_footerActions:has(.cuddle-sidebar-art) {
+  box-sizing:border-box;
+  container-type:size;
+  flex:0 1 calc(242 * var(--cuddle-u));
+  height:calc(242 * var(--cuddle-u));
+  min-height:0;
+  width:100%;
+  padding-bottom:calc(12 * var(--cuddle-u));
+  justify-content:center;
+  align-items:center;
+  overflow:hidden;
+}
+body[data-umaru-cuddle] [data-slot="sidebar.footer.action"]:has(.cuddle-sidebar-art) {
+  min-width:0;
+  width:100%;
+}
+body[data-umaru-cuddle] .cuddle-sidebar-art {
+  --cuddle-art-u:min(var(--cuddle-u),calc(100cqw / 252),calc(100cqh / 230));
+  position:relative;
+  flex:0 1 auto;
+  width:calc(252 * var(--cuddle-art-u));
+  height:calc(230 * var(--cuddle-art-u));
+  max-width:100%;
+  max-height:calc(230 * var(--cuddle-u));
+  aspect-ratio:252 / 230;
+  margin-inline:auto;
+  pointer-events:none;
+  user-select:none;
+}
+body[data-umaru-cuddle] .cuddle-sidebar-crop {
+  position:relative;
+  display:block;
+  width:100%;
+  height:100%;
+  overflow:hidden;
+  pointer-events:none;
+  user-select:none;
+}
+body[data-umaru-cuddle] .cuddle-sidebar-crop>img {
+  position:absolute;
+  width:590.079365%;
+  max-width:none;
+  height:auto;
+  left:-10.317460%;
+  top:-314.782609%;
+  pointer-events:none;
+  user-select:none;
+}
+body[data-umaru-cuddle] .wtg9ga_root:not(.wtg9ga_collapsed) .wtg9ga_settingsArea {
+  box-sizing:border-box;
+  min-height:calc(64 * var(--cuddle-u));
+  width:calc(100% - 16 * var(--cuddle-u));
+  margin-inline:calc(8 * var(--cuddle-u));
+  padding:calc(16 * var(--cuddle-u)) calc(5 * var(--cuddle-u)) 0;
+  border-top:1px solid #f7d7c8;
+}
+
+@media (max-height:620px) {
+  body[data-umaru-cuddle] .wtg9ga_footerActions:has(.cuddle-sidebar-art) {display:none;}
+  body[data-umaru-cuddle] .wtg9ga_root:not(.wtg9ga_collapsed) {padding-bottom:8px;}
+  body[data-umaru-cuddle] .wtg9ga_root:not(.wtg9ga_collapsed) .wtg9ga_logoRow {height:calc(92 * var(--cuddle-u));overflow:hidden;}
+  body[data-umaru-cuddle] .cuddle-brand {top:calc(8 * var(--cuddle-u));height:calc(67 * var(--cuddle-brand-u));}
+  body[data-umaru-cuddle] .wtg9ga_root:not(.wtg9ga_collapsed) .wtg9ga_newSession {margin-bottom:8px;}
+  body[data-umaru-cuddle] .wtg9ga_root:not(.wtg9ga_collapsed) .wtg9ga_panelList {margin-bottom:8px;padding-bottom:8px;}
+}
+@media (forced-colors:active) {
+  body[data-umaru-cuddle] .cuddle-brand,
+  body[data-umaru-cuddle] .cuddle-sidebar-art {display:none;}
+  body[data-umaru-cuddle] .wtg9ga_root:not(.wtg9ga_collapsed) .wtg9ga_brandIdentity {opacity:1;}
+  body[data-umaru-cuddle] .wtg9ga_footerActions:has(.cuddle-sidebar-art) {display:none;}
+}
