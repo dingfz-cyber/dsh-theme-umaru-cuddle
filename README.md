@@ -2,7 +2,7 @@
 
 适用于 DeepSeek Harness（DSH）的独立主题。桃粉色、奶油白和小埋抱枕插画，为新会话页面添一点软绵绵的气氛。
 
-**当前版本：1.0.2** · [下载安装包](https://github.com/dingfz-cyber/dsh-theme-umaru-cuddle/releases/tag/v1.0.2)
+**当前版本：1.0.3** · [下载安装包](https://github.com/dingfz-cyber/dsh-theme-umaru-cuddle/releases/tag/v1.0.3)
 
 ## 设计参考
 
@@ -26,7 +26,7 @@
 
 ### 使用 ZIP 本地安装
 
-1. 在 [v1.0.2 发布页](https://github.com/dingfz-cyber/dsh-theme-umaru-cuddle/releases/tag/v1.0.2)下载 `dsh-theme-umaru-cuddle-1.0.2.zip`。
+1. 在 [v1.0.3 发布页](https://github.com/dingfz-cyber/dsh-theme-umaru-cuddle/releases/tag/v1.0.3)下载 `dsh-theme-umaru-cuddle-1.0.3.zip`。
 2. 解压到长期保留的目录。
 3. 在 DSH 的 **插件 → 添加插件**中填写解压后**包含 `package.json` 的目录路径**，安装并启用。
 
@@ -42,7 +42,9 @@
 
 ## 版本说明
 
-这是本仓库首次发布，**1.0.2 已包含前两轮修正**：
+**1.0.3 已包含以下累计修正**：
+
+- **1.0.3：底部遮罩修复。** 修复聊天滚动时，文字从输入框、底部状态栏及下方留白后面透出的问题。移除主题对输入区外层透明背景的覆盖，恢复 DSH 官方渐变与不透明底部遮罩。
 
 - **1.0.2：重影修复。** 顶部背景与底部原图插画分区显示，避免已有会话及深色模式下半透明图层叠出两套人物轮廓。
 - **1.0.1：布局修正。** 修正主区域左侧大块空白，输入框随主区域宽度铺开；调整欢迎标题、侧栏导航及会话行距，并保留输入框下方的工作区与模式控件。

@@ -78,9 +78,10 @@ body[data-umaru-cuddle] .an3WzG_body {
   --dsh-content-font-delta:calc(21 * var(--cuddle-u) - 14px);
 }
 body[data-umaru-cuddle] .an3WzG_scrollBody {background:transparent;scrollbar-width:thin;}
-/* Keep the existing scroll container and the in-flow sticky composer. */
+/* Keep DSH's sticky composer background: its native fade becomes opaque
+   below the top edge and masks messages behind the input and status bar. */
 body[data-umaru-cuddle] .an3WzG_root[data-phase="active"] .an3WzG_composerSeat {
-  background:transparent;padding-bottom:calc(20 * var(--cuddle-u));
+  padding-bottom:calc(20 * var(--cuddle-u));
 }
 body[data-umaru-cuddle] .an3WzG_root[data-phase="active"]>.cuddle-room,
 body[data-umaru-cuddle] .an3WzG_root[data-phase="active"]>.cuddle-original-art {opacity:.2;}
